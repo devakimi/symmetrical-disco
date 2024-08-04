@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JetSpeed</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-4KSF5pAgwAzTjRAOPlfiwAoXr3AViv0I5Jd1Tc5tw2EGNSm5XeSoFxThw0yl1H8vD4/Z3Dp5AS34EXg8y/c2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      header {
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 15px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+      header img.h-12 {
+        height: 50px;
+        margin-right: 10px;
+      }
+      nav .nav-link {
+        color: #343a40;
+        transition: color 0.3s ease;
+      }
+      nav .nav-link:hover {
+        color: #007bff;
+      }
+      .card {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+      footer {
+        background-color: #f8f9fa;
+        padding: 20px 0;
+      }
+      footer ul.nav .nav-link {
+        font-size: 0.9rem;
+      }
+      footer p {
+        margin: 0;
+      }
+      .email-button {
+        font-size: 0.8rem;
+      }
+      .review-card {
+        padding: 20px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+      .review-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.03);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        transition: clip-path 0.3s ease-in-out;
+      }
+      .review-card:hover::after {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      .table-custom {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+      }
+      .table-custom th,
+      .table-custom td {
+        padding: 1rem;
+        vertical-align: top;
+        border-top: 1px solid #dee2e6;
+      }
+      .table-custom thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+      }
+      .table-custom tbody + tbody {
+        border-top: 2px solid #dee2e6;
+      }
+      .table-custom td button {
+        font-size: 0.8rem;
+      }
+      #date-time {
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+      .newsletter-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .newsletter-form input {
+        width: 200px;
+        padding: 5px;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body class="bg-light text-dark">
+    <header class="bg-white shadow-sm p-3 mb-5">
+      <div class="container d-flex justify-content-between align-items-center">
+        <img src="images/logo.png" alt="logo" class="h-12" />
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link text-dark">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-dark">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-dark">BOOK HOTEL</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-dark">BOOK FLIGHT</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-dark">BOOK PACKAGE</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-dark">TRAVEL INSURANCE</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container text-center">
+      <h2 class="display-4 mb-5">Why Travel With US?</h2>
+      <div class="mb-5">
+        <p>Awarded #1 Travel Agency for Families with Pre-school Kids</p>
+        <p>Accredited with National Travel Agencies Association</p>
+        <p>Awarded Best Tour Agency in 2013, 2014</p>
+      </div>
+      <h2 class="display-4 mb-5">Photo Galleries</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="images/dubai.jpg"
+              class="card-img-top"
+              alt="An image of Dubai"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Dubai</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="images/usa.jpeg"
+              class="card-img-top"
+              alt="An image of USA"
+            />
+            <div class="card-body">
+              <h5 class="card-title">USA</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img
+              src="images/australia.jpeg"
+              class="card-img-top"
+              alt="An image of Australia"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Australia</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="display-4 mb-5">What Customers Are Saying</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="review-card">
+            <h5 class="card-title">An incredible experience</h5>
+            <p class="card-text">
+              I went to Bali with some friends and enjoyed a memorable trip
+              thanks to you. Your people are awesome. With you guys, we
+              discovered Bali off the beaten track. Simply the best way to
+              experience Bali.
+            </p>
+            <footer class="blockquote-footer">Jeremy Lee</footer>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="review-card">
+            <h5 class="card-title">Kudos to Ms Deng</h5>
+            <p class="card-text">
+              Part of our Guilin tour with China includes a beautiful trip down
+              the Guilin River. Our guide Ms Deng was so informative and
+              helpful. She made sure we were on the top deck at the key points
+              on the river. Saw lots of water buffalo and hundreds of bamboo
+              rafts. Great scenery and unforgettable experience.
+            </p>
+            <footer class="blockquote-footer">Cindy</footer>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="review-card">
+            <h5 class="card-title">Great Food!!!</h5>
+            <p class="card-text">
+              Jetspeed Agency is one of the best, if not the best, travel
+              agencies I've ever travelled with. Accommodation was top-notch,
+              and the food is simply a highlight of the whole trip. From the
+              crab buffet at Sapporo to the fine dining at Hakodate, it was
+              worth every penny spent.
+            </p>
+            <footer class="blockquote-footer">Jovin Teo</footer>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="review-card">
+            <h5 class="card-title">You won't go wrong with Jetspeed</h5>
+            <p class="card-text">
+              I booked a food trip with Jetspeed and I am so glad I did. Our
+              guide, Peter, brought us to all the local dining places where we
+              got to a taste of authentic local food. From the mouth-watering
+              Laksa to the legendary Chilli crab, we had such great fun.
+            </p>
+            <footer class="blockquote-footer">Simon Bond</footer>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="review-card">
+            <h5 class="card-title">Excellent</h5>
+            <p class="card-text">
+              Our guide Yang is so knowledgeable and experienced. He goes out of
+              the way to help us secure the best seats for all the performances,
+              and also took good care of my grandma who was sick on the trip.
+              Thanks, Yang. Look forward to travelling with Jetspeed again.
+            </p>
+            <footer class="blockquote-footer">Gail Scott</footer>
+          </div>
+        </div>
+      </div>
+      <h2 class="display-4 mb-5">Upcoming Tour Dates</h2>
+      <div class="table-responsive">
+        <table class="table-custom">
+          <thead class="thead-dark">
+            <tr>
+              <th>Tour Package</th>
+              <th>Dates</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>8 Days 7 Night China Tour</td>
+              <td>1 Mar 15 to 8 Mar 15</td>
+              <td>Confirmed Departure, No Vacancies Left</td>
+              <td><button class="btn btn-info">View Details</button></td>
+            </tr>
+            <tr>
+              <td>10 Days 9 Night Africa Tour</td>
+              <td>5 Mar 15 to 14 Mar 15</td>
+              <td>Confirmed Departure, No Vacancies Left</td>
+              <td><button class="btn btn-info">View Details</button></td>
+            </tr>
+            <tr>
+              <td>8 Days 7 Night Greece Tour</td>
+              <td>15 Mar 15 to 22 Mar 15</td>
+              <td>Confirmed Departure, Vacancies Available</td>
+              <td><button class="btn btn-info">View Details</button></td>
+            </tr>
+            <tr>
+              <td>13 Days 12 Night Korea and Japan Tour</td>
+              <td>20 Mar 15 to 1 Apr 15</td>
+              <td>Pending</td>
+              <td><button class="btn btn-info">View Details</button></td>
+            </tr>
+            <tr>
+              <td>5 Days 4 Night Canada Tour</td>
+              <td>23 Mar 15 to 27 Mar 15</td>
+              <td>Confirmed Departure, Vacancies Available</td>
+              <td><button class="btn btn-info">View Details</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="newsletter-form">
+        <input
+          type="email"
+          class="form-control"
+          placeholder="Subscribe to our newsletter"
+        />
+        <button class="btn btn-primary">Subscribe</button>
+      </div>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+      <div class="container">
+        <ul class="nav justify-content-center mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">CONTACT US</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">PRESS RELEASE</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">MEDIA</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">TRAVEL TIPS</a>
+          </li>
+        </ul>
+        <p class="mb-0">&copy; 2024 JetSpeed. All rights reserved.</p>
+      </div>
+    </footer>
+    <div class="fixed-bottom m-3">
+      <a href="mailto:info@jetspeed.com" class="btn btn-primary email-button">
+        <i class="fas fa-envelope"></i> Email Us
+      </a>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const dateTime = document.getElementById("date-time");
+        const now = new Date();
+        dateTime.innerText = now.toLocaleString();
+      });
+    </script>
+  </body>
+</html>
